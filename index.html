@@ -13,6 +13,33 @@
       rel="stylesheet"
     />
 
+    <style>
+  .hero {
+    max-width: min(920px, 92vw);
+    margin: clamp(24px, 5vw, 64px) auto;
+    padding: clamp(8px, 2vw, 16px) clamp(12px, 3vw, 24px);
+    background: linear-gradient(90deg, #e9edf7 50%, #fff 50%);
+    border-radius: 16px;
+  }
+  .hero-title {
+    font-family: "Pretendard Variable","Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 800;
+    font-size: clamp(28px, 6vw, 56px);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    text-align: center;
+    margin: 0;
+    word-break: keep-all;     /* 한국어 어색한 단어 잘림 방지 */
+    text-wrap: balance;       /* 지원 브라우저에서 줄 균형 */
+  }
+  .hero-title > span { display: block; }
+  .hero-title .sub { font-weight: 700; opacity: 0.92; }
+
+  /* text-wrap 미지원 대체: 최대 글자폭으로 자연스런 줄바꿈 유도 */
+  @supports not (text-wrap: balance) {
+    .hero-title { max-width: 18ch; margin-inline: auto; }
+  }
+</style>
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
@@ -87,13 +114,12 @@
         >
           <div class="col-lg-10 ftco-animate d-flex align-items-center">
             <div class="text text-center">
-              <h1
-                class="mb-3 bread"
-                style="font-size: 2.8rem; animation: fadeInDown 1s ease-out"
-              >
-                새벽녹차의 한 모금처럼 <br>
-                가볍게 시작해 오래 사랑받는 프로그램을 만듭니다. <br>
-              </h1>
+              <div class="hero">
+  <h1 class="hero-title">
+    <span>새벽녹차의 한 모금처럼</span>
+    <span class="sub">가볍게 시작해 오래 사랑받는 프로그램을 만듭니다.</span>
+  </h1>
+</div>
               <p class="breadcrumbs animated-text" style="color: #181508">
                 조용한 새벽, 따뜻한 차 한 잔 옆에 두고 코드를 가지고 놉니다.<br />
                 개발은 저에게 일 뿐만 아니라, 저만의 작은 작품을 만드는 소중한 취미입니다.
