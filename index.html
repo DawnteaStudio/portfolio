@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>박세원 | Dawntea Studio</title>
-    <meta name="description" content="개발자 박세원의 포트폴리오. 공방 수업 서비스 우클링을 위한 AI 설계 검토 도구, 학습 노트 편집기 TIL Studio, 물류 지도 데모를 소개합니다.">
+    <title>박세원 | 설계부터 API 구현과 운영까지 | Dawntea Studio</title>
+    <meta name="description" content="Codex를 활용해 설계부터 API 구현과 운영까지 연결하는 개발자 박세원. 우클링의 API 계약과 백엔드, 공식 채널 운영, TIL Studio, IRC 서버와 셸 개발 경험을 소개합니다.">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&amp;display=swap">
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -38,10 +38,10 @@
         <div class="container hero-layout">
           <div class="hero-intro">
             <p class="hero-byline">개발자 박세원</p>
-            <h1><span>AI가 제안한 설계를</span> <span>코드로 검증합니다.</span></h1>
-            <p class="hero-summary">공방 수업 서비스 우클링에서 Codex와 데이터 모델을 설계했습니다. 팀원이 같은 설계안을 보고 무엇이 왜 바뀌었는지 확인할 수 있도록 버전별 탐색기를 만들었습니다.</p>
+            <h1><span>설계부터 API 구현,</span> <span>운영까지 잇습니다.</span></h1>
+            <p class="hero-summary">Codex와 함께 공방 수업 서비스 우클링의 데이터 모델과 API를 개발했습니다. 요구사항과 완료 기준을 정하고, 제안을 검토하고 테스트해 반영합니다. 공식 Instagram을 관리하며 모집 안내와 참가 후기도 전달합니다.</p>
             <div class="hero-actions">
-              <a class="primary-link" href="#ucling-project">우클링 제작 과정 보기 <span aria-hidden="true">↓</span></a>
+              <a class="primary-link" href="#ucling-project">우클링 개발과 운영 보기 <span aria-hidden="true">↓</span></a>
               <a class="text-link" href="https://github.com/DawnteaStudio">GitHub <span aria-hidden="true">↗</span></a>
             </div>
           </div>
@@ -60,64 +60,72 @@
 
           <article class="project-feature" id="ucling-project" aria-labelledby="ucling-title">
             <header class="project-header">
-              <p class="project-meta">2026.06부터 / SW마에스트로 3인 팀 / 설계 도구 제작</p>
-              <h3 id="ucling-title">우클링 설계 검토 도구</h3>
+              <p class="project-meta">2026.06부터 / SW마에스트로 3인 팀 / API 설계, 백엔드 개발, 공식 채널 관리</p>
+              <h3 id="ucling-title">우클링</h3>
               <p class="project-lead">
-                우클링은 공방 강사가 수업을 개설하고 수강 신청을 관리하는 서비스입니다.
-                저는 팀원이 “이 컬럼은 왜 필요한가?”라는 질문에 답을 찾을 수 있도록, 데이터 구조를 설계 당시의 결정 기록과 함께 보는 포털을 만들었습니다.
+                공방 강사가 수업을 개설하고 수강 신청을 관리하는 서비스입니다.
+                원데이클래스와 만남을 결합한 ‘하루연애’를 함께 소개하며 고객을 모집했습니다.
+                저는 서비스의 데이터와 API를 설계하고, 신청과 관리자 기능을 구현하며 공식 채널을 관리했습니다.
               </p>
             </header>
 
-            <dl class="project-metrics" aria-label="2026년 11월 3일 승인 모델 v0.12.0의 회원, 수강, 결제 영역">
-              <div><dt>테이블</dt><dd>59개</dd></div>
-              <div><dt>컬럼</dt><dd>434개</dd></div>
-              <div><dt>물리 참조 관계</dt><dd>79개</dd></div>
-            </dl>
-            <p class="project-metrics-note">2026년 11월 3일 승인본 v0.12.0 기준. 회원, 수강, 결제 영역을 합산한 수치입니다.</p>
-
             <div class="project-case-grid">
               <div class="project-case">
-                <h4>Codex 초안에서 승인 모델까지</h4>
+                <h4>API 계약과 구현 기준</h4>
                 <p>
-                  Codex에 용어와 컬럼의 초안을 맡겼습니다. 제안을 검토한 뒤 채택한 이유와 보류한 이유를 기록하도록 작업 절차를 설계했습니다.
-                  예를 들어 용어별 생성기를 두자는 제안은 관리 부담이 커서, 팀원 세 명이 함께 고칠 수 있는 용어표 하나로 줄였습니다.
+                  업무 용어를 논리 모델, 물리 컬럼, ERD와 OpenAPI로 연결했습니다.
+                  외부 API 동작 109개의 요청과 응답, 권한, 오류, 재시도 규칙을 담은 명세를 작성하고 보완했습니다.
                 </p>
-                <figure class="project-figure">
-                  <a href="https://ucling-data-model-portal.vercel.app/guide#guide-workflow-title">
-                    <img src="images/ucling-approval.jpg" alt="초안 수정부터 검증, 승인, 운영 반영까지 여섯 단계의 설계 가이드 열기" width="1336" height="671" loading="lazy" decoding="async" />
-                  </a>
-                  <figcaption>테이블 관계와 문서 링크를 자동 검사한 뒤 사람이 승인하는 절차입니다. 승인본 14개 각각에서 당시 모델과 변경 내역을 다시 열 수 있습니다.</figcaption>
-                </figure>
+                <p>
+                  관리자 조회에서 ID 형식 오류는 400, 0과 음수는 422로 구분했습니다.
+                  목록의 생성일과 ID 정렬을 커서 기준에 맞추고, 명세의 참조와 예제를 검사하는 검증 코드에도 반영했습니다.
+                </p>
+                <div class="project-links">
+                  <a href="https://github.com/ucling/ucling-docs/pull/265">ID 검증 계약</a>
+                  <a href="https://github.com/ucling/ucling-docs/pull/267">정렬과 커서 계약</a>
+                  <a href="https://dev.ucling.kr/api-docs/">Swagger</a>
+                </div>
+                <p class="project-source-note">109개는 2026.11.16 명세 기준입니다. 팀 저장소와 Swagger 열람에는 팀 권한과 인증이 필요합니다.</p>
               </div>
               <div class="project-case">
-                <h4>약관 버전과 회원 동의</h4>
-                <p>
-                  새 약관을 게시한 뒤에도 회원이 어떤 판본에 동의했는지 알 수 있어야 했습니다.
-                  약관 문서와 버전을 분리하고, 문서가 가리키는 현재 버전과 가입 당시의 동의 기록을 구분했습니다.
-                </p>
-                <figure class="project-figure">
-                  <a href="https://ucling-data-model-portal.vercel.app/erd?version=v0.12.0&amp;schemas=member&amp;query=%EC%A0%95%EC%B1%85+%EB%AC%B8%EC%84%9C&amp;table=member.%EC%A0%95%EC%B1%85+%EB%AC%B8%EC%84%9C+%EB%B2%84%EC%A0%84">
-                    <img src="images/ucling-erd.jpg" alt="정책 문서와 문서 버전의 참조 관계를 보여주는 ERD 탐색기 열기" width="1322" height="884" loading="lazy" decoding="async" />
-                  </a>
-                  <figcaption>‘정책 문서’를 검색한 화면. 오른쪽에서 선택한 버전의 물리 컬럼 여섯 개를 논리명과 대조할 수 있습니다.</figcaption>
-                </figure>
+                <h4>백엔드 구현과 실패 복구</h4>
+                <ul class="project-points">
+                  <li><strong>회원가입.</strong> 프로필 생성이 중단돼도 기존 회원 ID와 최초 약관 동의를 보존해 가입을 이어가도록 했습니다.</li>
+                  <li><strong>수강 신청.</strong> 정원 선점과 금액 보존, 신청 확정을 연결했습니다. 중복 요청은 같은 처리 결과를 사용하고, 취소 확인 뒤 정원을 한 번만 복구하도록 구현했습니다.</li>
+                  <li><strong>관리자 홈.</strong> 추천과 시즌 수업을 한 트랜잭션으로 저장하고 편집 버전 충돌을 검사했습니다. 교체한 이미지 정리는 DB 커밋 이후 실행합니다.</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/ucling/ucling-member/pull/67">회원가입 PR</a>
+                  <a href="https://github.com/ucling/ucling-learning/pull/245">수강 신청 PR</a>
+                  <a href="https://github.com/ucling/ucling-learning/pull/302">관리자 홈 PR</a>
+                </div>
+                <p class="project-source-note">본인 작성 후 병합된 PR입니다. 팀 저장소 접근 권한이 필요합니다.</p>
               </div>
-            </div>
-
-            <div class="project-api">
-              <h4>설계에서 구현까지</h4>
-              <p>
-                <strong>홈 수업 편성.</strong> ‘추천’과 ‘시즌’ 영역을 재배치해도 각 영역 안의 수업 순서는 유지되어야 했습니다.
-                영역과 수업 배치를 두 테이블로 나눴고, 두 승인본을 비교하면 추가된 테이블과 컬럼을 확인할 수 있습니다.
-              </p>
-              <p>
-                <strong>회원가입 API.</strong> 용어사전의 정의를 논리 모델과 PostgreSQL 컬럼으로 구체화하고, 테이블 관계도(ERD)를 작성한 뒤 Swagger로 API의 요청과 응답을 정의했습니다.
-                Spring Boot에서 회원과 최초 약관 동의를 함께 저장하고, 수강생 프로필 생성이 중단돼도 같은 회원 ID로 가입을 이어가도록 구현했습니다.
-              </p>
-            </div>
-            <div class="project-links">
-              <a href="https://ucling-data-model-portal.vercel.app/erd?version=v0.12.0&amp;schemas=learning&amp;query=%ED%99%88%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%ED%8E%B8%EC%84%B1&amp;table=learning.%ED%99%88%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%ED%8E%B8%EC%84%B1">홈 수업 편성 ERD 보기</a>
-              <a href="https://ucling-data-model-portal.vercel.app/documents?version=v0.12.0">용어사전과 설계 결정 기록</a>
+              <div class="project-case">
+                <h4>Codex 활용과 설계 검토 도구</h4>
+                <p>Codex에 초안과 구현, 검증 작업을 맡기고 채택한 결정과 보류한 이유를 남겼습니다. 용어마다 생성기를 두자는 제안은 관리 부담을 고려해 공통 용어표 하나로 줄였습니다.</p>
+                <p>설계 원문, 테이블 관계, 변경 내역을 같은 버전으로 보는 탐색기를 직접 설계했습니다. 자동 검사와 미리보기를 거쳐 승인한 버전을 저장하고, 이전 판단을 다시 확인하도록 구성했습니다.</p>
+                <figure class="project-figure">
+                  <a href="https://ucling-data-model-portal.vercel.app/guide#guide-workflow-title">
+                    <img src="images/ucling-approval.jpg" alt="초안 수정, 검증, 승인과 버전 저장을 안내하는 우클링 설계 검토 가이드" width="1336" height="671" loading="lazy" decoding="async" />
+                  </a>
+                  <figcaption>팀원이 설계와 결정 근거를 함께 확인하는 작업 절차입니다.</figcaption>
+                </figure>
+                <div class="project-links">
+                  <a href="https://ucling-data-model-portal.vercel.app/erd?version=v0.12.0">승인본 ERD</a>
+                  <a href="https://ucling-data-model-portal.vercel.app/documents?version=v0.12.0">용어와 결정 기록</a>
+                </div>
+              </div>
+              <div class="project-case">
+                <h4>공식 Instagram 운영</h4>
+                <p>공식 계정에서 지역별 공방과 클래스, 닉네임 참여 방식과 모집 일정, 현장 후기를 안내했습니다. 카드뉴스와 프로필 신청 링크로 참여 방법을 전달했습니다.</p>
+                <p>팀이 공개한 10월 신청자 <strong>241명(참가 대기자 포함)</strong>과 참가 후기를 크리스마스 모집 콘텐츠에 활용했습니다.</p>
+                <div class="project-links">
+                  <a href="https://www.instagram.com/ucling.official/">공식 Instagram</a>
+                  <a href="https://www.instagram.com/p/DfpAriuEjvk/">팀 신청 현황과 후기</a>
+                </div>
+                <p class="project-source-note">신청자 수는 공식 계정에 게시한 팀 운영 집계입니다. 2026.11.17 확인.</p>
+              </div>
             </div>
           </article>
 
@@ -131,20 +139,24 @@
               </p>
               <div class="project-links"><a href="https://github.com/DawnteaStudio/til-studio">TIL Studio 소스 코드</a></div>
             </article>
-            <article class="project-card" aria-labelledby="catalog-project-title">
-              <p class="project-meta">2026 / SW마에스트로 개인 과제</p>
-              <h3 id="catalog-project-title">스마트홈 UI 카탈로그</h3>
-              <p>같은 스마트홈 데이터로 운영 현황, 가족 일정, 에너지 절감 등 목적이 다른 대시보드 15종을 만들었습니다. AI가 화면을 생성하면 공통 기준으로 검토하고, 수정이 필요한 테마만 다시 생성하도록 작업을 나눴습니다.</p>
-              <div class="project-links"><a href="https://github.com/DawnteaStudio/soma-subject-02">대시보드와 제작 과정</a></div>
+            <article class="project-card" aria-labelledby="irc-project-title">
+              <p class="project-meta">2025.01~02 / 42서울 팀 프로젝트 / C++</p>
+              <h3 id="irc-project-title">ft_irc</h3>
+              <ul class="project-points">
+                <li>팀장으로 소켓 관리와 명령어 API를 맡아, poll 기반 다중 접속 채팅 서버를 개발했습니다.</li>
+                <li>tcpflow로 irssi의 미응답 원인을 추적하고, 나뉘거나 합쳐 도착한 명령을 개행 단위로 분리하도록 수신 버퍼를 수정했습니다.</li>
+                <li>닉네임, 채널과 권한 상태에 맞춰 명령을 검사하고 IRC 응답 형식을 정리했습니다.</li>
+              </ul>
+              <div class="project-links"><a href="https://github.com/DawnteaStudio/ft_irc">IRC 서버 소스 코드</a></div>
             </article>
-            <article class="project-card" aria-labelledby="review-project-title">
-              <p class="project-meta">2026.05 / SW마에스트로 5인 팀</p>
-              <h3 id="review-project-title">Review Ops Agent</h3>
-              <p>
-                소상공인의 매장 리뷰 응대를 돕는 도구를 제안했습니다.
-                팀은 Upstage Solar로 리뷰를 분류하고 LangGraph로 가게의 말투에 맞는 답글을 생성했습니다. 저는 팀 결과물을 통합해 제출했습니다.
-              </p>
-              <div class="project-links"><a href="https://github.com/UpstageAI/sw-maestro-project/pull/147">팀 결과물과 제출 기록</a></div>
+            <article class="project-card" aria-labelledby="minishell-project-title">
+              <p class="project-meta">2024.03~05 / 42서울 2인 팀 / C, POSIX</p>
+              <h3 id="minishell-project-title">minishell</h3>
+              <ul class="project-points">
+                <li>파서와 실행기를 나눠 협업하고, PATH 탐색과 자식 프로세스 생성, 파이프 연결, 종료 대기를 담당했습니다.</li>
+                <li>부모와 자식의 시그널 처리를 나누고, Bash와 같은 입력을 비교하며 예외 동작을 수정했습니다.</li>
+              </ul>
+              <div class="project-links"><a href="https://github.com/DawnteaStudio/Jetty_minishell">셸 실행기 소스 코드</a></div>
             </article>
           </div>
 
@@ -155,16 +167,6 @@
                 <div class="project-meta">2025.03~07 / TypeScript, Fastify</div>
                 <h4><a href="https://github.com/Good-PingPong-Greate-PingPong/ping_pong/tree/last">ft_transcendence</a></h4>
                 <p>실시간 탁구 게임에서 Google 로그인과 2단계 인증을 구현하고, 4인 토너먼트의 대진과 경기를 한 트랜잭션으로 생성했습니다.</p>
-              </li>
-              <li>
-                <div class="project-meta">2025.01~02 / C++</div>
-                <h4><a href="https://github.com/DawnteaStudio/ft_irc">ft_irc</a></h4>
-                <p>여러 사용자가 접속하는 IRC 채팅 서버를 개발했습니다. 잘린 명령을 받으면 응답이 멈추는 문제를 TCP 통신 기록으로 찾아 수신 버퍼를 수정했습니다.</p>
-              </li>
-              <li>
-                <div class="project-meta">2024.03~05 / C, POSIX</div>
-                <h4><a href="https://github.com/DawnteaStudio/Jetty_minishell">minishell</a></h4>
-                <p>팀으로 만든 셸에서 명령 실행을 맡았습니다. 실행 파일 탐색, 자식 프로세스 생성과 종료 대기, 시그널 처리를 구현했습니다.</p>
               </li>
               <li>
                 <div class="project-meta">2023.05~06 / Node.js, Express, MongoDB</div>
@@ -178,11 +180,11 @@
 
       <section class="ftco-section about-section" id="about-section" aria-labelledby="about-title">
         <div class="container about-layout">
-          <img src="images/profile.jpg" width="1000" height="1286" alt="박세원" loading="lazy" class="portrait">
+          <img src="images/profile.jpg" width="2362" height="3038" alt="박세원" loading="lazy" decoding="async" class="portrait">
           <div class="about-copy">
             <h2 id="about-title">About Me</h2>
-            <p>산업경영공학을 전공하고 42서울에서 C로 셸을, C++로 채팅 서버를 만들었습니다. 요즘은 팀 프로젝트에서 반복되는 일을 찾아 AI와 함께 쓸 도구로 만드는 데 관심이 있습니다.</p>
-            <p>우클링에서는 설계 결정을 버전별로 남겼고, 개인 작업실 Dawntea Studio에서는 배운 내용을 초안에서 GitHub 기록까지 이어 주는 노트 편집기를 만들었습니다.</p>
+            <p>산업경영공학을 전공하고 42서울에서 C로 셸을, C++로 채팅 서버를 만들었습니다. 실제 입력과 통신 기록을 확인하며 문제가 생긴 지점을 찾고, 데이터가 일관되게 저장되는 조건을 코드로 옮깁니다.</p>
+            <p>우클링에서는 Codex를 활용해 API 계약과 백엔드를 개발하고 공식 채널을 관리했습니다. 개인 작업실 Dawntea Studio에서는 학습 글의 초안을 검토해 GitHub 기록으로 남기는 노트 편집기를 만들었습니다.</p>
           </div>
         </div>
       </section>
@@ -210,7 +212,7 @@
               <p class="record-date"><time datetime="2026-04">2026.04</time> – 현재</p>
               <div class="record-body">
                 <h3>SW마에스트로 17기</h3>
-                <p>2026년 4월부터 5월까지 예비연수에 참여했습니다. 6월부터 진행 중인 본연수에서는 3인 팀의 백엔드를 맡아 공방 수업 운영 서비스 우클링의 데이터 모델과 회원 API를 개발했습니다.</p>
+                <p>2026년 4월부터 5월까지 예비연수에 참여했습니다. 6월부터 진행 중인 본연수에서는 3인 팀의 백엔드를 맡아 공방 수업 운영 서비스 우클링의 데이터 모델과 회원, 수강 신청, 관리자 API를 개발했습니다.</p>
               </div>
             </article>
             <article class="timeline-item" id="edu-ssafy">
@@ -250,8 +252,8 @@
           <h2 id="skills-title">Skills</h2>
           <div class="skills-grid">
             <article class="skill-item">
-              <h3>AI 연동과 설계 검토</h3>
-              <p>OpenAI와 Gemini의 웹 검색으로 학습 글 초안을 만들고 Zod로 응답 형식을 검사했습니다. Codex가 제안한 설계 변경은 검토 후 반영했습니다.</p>
+              <h3>AI 활용과 API 연동</h3>
+              <p>Codex에 요구사항과 완료 기준을 전달하고 제안과 테스트 결과를 검토해 반영했습니다. OpenAI와 Gemini의 웹 검색을 연결하고 Zod로 응답을 검사했습니다.</p>
             </article>
             <article class="skill-item">
               <h3>학습 기록 도구 개발</h3>
@@ -259,7 +261,7 @@
             </article>
             <article class="skill-item">
               <h3>백엔드와 데이터 모델링</h3>
-              <p>DBML로 테이블 관계를 정의하고 OpenAPI 명세에 맞춰 Spring Boot와 PostgreSQL로 회원 API를 구현했습니다.</p>
+              <p>DBML과 OpenAPI로 테이블 관계와 서비스 계약을 정의하고, Spring Boot와 PostgreSQL로 회원, 신청, 관리자 API를 구현했습니다.</p>
             </article>
             <article class="skill-item">
               <h3>인증과 실시간 통신</h3>
