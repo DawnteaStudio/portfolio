@@ -104,6 +104,7 @@ section[id] > .container > h2, .heading-section h2, .about-copy h2, #contact-tit
 .project-links { margin-top: 1rem; }
 .project-points { margin: 0; padding-left: 1.2rem; }
 .project-points li + li { margin-top: .6rem; }
+.project-points + p { margin-top: .8rem; }
 .project-source-note { color: #53645a; font-size: .83rem; line-height: 1.65; }
 .project-case .project-source-note { margin-top: .65rem; margin-bottom: 0; }
 .more-projects { grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); margin-top: clamp(2.25rem, 4.5vw, 4rem); }
